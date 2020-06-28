@@ -1,2 +1,2 @@
 # pythontest
-py¡∑œ∞
+python demo
