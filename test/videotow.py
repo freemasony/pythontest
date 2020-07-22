@@ -86,8 +86,8 @@ if __name__ == '__main__':
     socket.setdefaulttimeout(20)  # 设置socket层超时时间20秒
     catch_video.index_url = 'https://wuji.zhulong-zuida.com/20190706/762_c260ca6c/index.m3u8'
     ts_url, ts_name = catch_video.get_ts_url()
-    I = 104
-    while I < 110:
+    I = 0
+    while I < len(ts_name):
         # 5个进程并发运行
         p_l = [Process(target=catch_video.start_work, args=(i, ts_url + ts_name[i])) for i in range(I, I + 8)]
         for p in p_l:
